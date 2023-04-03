@@ -13,6 +13,7 @@
 html {
   font-family: "Montserrat", sans-serif;
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 .header-nav {
@@ -82,19 +83,26 @@ html {
   margin-top: 20px;
 }
 .exhibition .wrap {
-  margin: 0 auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 .exhibition .wrap h1 {
   text-transform: uppercase;
   text-align: center;
+  margin: 0 auto;
   padding: 10px 20px;
   font-size: 1.8rem;
   color: rgb(92, 83, 160);
 }
 .exhibition .wrap .card-exhi {
+  margin-left: auto;
+  margin-right: auto;
   box-shadow: 0 0 3px black;
   margin-bottom: 20px;
   height: 400px;
+  max-height: 500px;
   max-width: 300px;
 }
 .exhibition .wrap .card-exhi .image {
@@ -116,6 +124,87 @@ html {
   margin-right: auto;
   margin-bottom: 20px;
 }
+.exhibition .wrap .card-exhi .info p {
+  font-size: 1.5rem;
+}
+
+.about {
+  margin-left: auto;
+  margin-right: 0;
+  margin-top: 50px;
+}
+.about .wrap {
+  padding: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.about .wrap .photo img {
+  width: 100%;
+}
+.about .wrap .about h1 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  color: rgb(92, 83, 160);
+}
+.about .wrap .about .line {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  width: 20%;
+  border: 2px solid rgb(92, 83, 160);
+}
+.about .wrap .about p {
+  padding: 0 10px 20px 10px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.subscribe {
+  background-color: rgb(174, 166, 231);
+}
+.subscribe .wrap {
+  margin: 0 auto;
+  padding: 50px;
+  text-align: center;
+  color: white;
+}
+.subscribe .wrap h1,
+.subscribe .wrap p {
+  text-transform: uppercase;
+}
+.subscribe .wrap h1 {
+  padding: 20px;
+}
+.subscribe .wrap p {
+  margin-bottom: 20px;
+}
+.subscribe .wrap input {
+  width: 100%;
+}
+.subscribe .wrap button {
+  text-transform: uppercase;
+  margin-top: 10px;
+  padding: 5px 20px;
+  background: none;
+  border: 1px solid rgb(72, 62, 145);
+  color: white;
+}
+
+.footer {
+  background-color: #f7bedf;
+}
+.footer div {
+  margin: 0 auto;
+  max-width: 1280px;
+}
+.footer div p {
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-size: 1.6rem;
+}
 
 @media (orientation: landscape) {
   .exhibition {
@@ -128,6 +217,10 @@ html {
   }
   .exhibition .wrap .card-exhi {
     display: inline-block;
+  }
+  .subscribe .wrap input {
+    padding: 10px 20px;
+    width: 90%;
   }
 }
 @media (min-width: 768px) {
@@ -154,12 +247,14 @@ html {
   .header-nav .menu .about,
   .header-nav .menu .articles,
   .header-nav .menu .subscribe {
+    background: none;
     padding: 10px 30px;
   }
   .header-nav .menu .articles {
     margin-right: 20px;
   }
   .header-nav .menu .subscribe {
+    margin-left: 50px;
     border: 1px solid rgb(92, 83, 160);
   }
   .header-nav .burger-btn {
@@ -171,22 +266,96 @@ html {
   .header-nav .header-info p {
     font-size: 3rem;
   }
-  .wrap {
-    margin: 0 auto;
+  .exhibition .wrap h1 {
+    margin-bottom: 20px;
+    font-size: 3rem;
+  }
+  .exhibition .wrap .card-exhi {
+    display: inline-block;
+    width: 33.3%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .exhibition .wrap .card-exhi .image {
+    height: 60%;
+  }
+  .exhibition .wrap .info {
+    padding: 10px 10px 10px 20px;
     text-align: center;
   }
-  .wrap .card-exhi {
-    display: inline-block;
-    width: 25%;
-    margin: 20px;
+  .exhibition .wrap .info .line {
+    border: 1px solid black;
+    width: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
   }
-  .wrap .card-exhi .image {
-    height: 60%;
+  .exhibition .wrap .info p {
+    font-size: 2rem;
+  }
+  .about .wrap {
+    max-width: 1600px;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40vh;
+  }
+  .about .wrap .photo,
+  .about .wrap .about {
+    width: 50%;
+    float: left;
+  }
+  .about .wrap .photo img {
+    width: 100%;
+    max-height: 800px;
+  }
+  .about .wrap .about h1 {
+    font-size: 3rem;
+  }
+  .about .wrap .about .line {
+    width: 20%;
+    margin-bottom: 50px;
+  }
+  .about .wrap .about p {
+    padding: 0 50px;
+    font-size: 1.6rem;
+  }
+  .subscribe {
+    margin-top: 30px;
+  }
+  .subscribe .wrap {
+    max-width: 1280px;
+  }
+  .subscribe .wrap h1 {
+    font-size: 3rem;
+  }
+  .subscribe .wrap p {
+    font-size: 1.6rem;
+  }
+  .subscribe .wrap input {
+    padding: 10px 20px;
+    width: 100%;
+  }
+  .subscribe .wrap button {
+    margin-top: 20px;
+    padding: 10px 50px;
+    font-size: 1.7rem;
   }
 }
 @media (min-width: 1024px) {
   .header-nav .menu a {
     font-size: 2.5rem;
+    transition: 0.3s;
+  }
+  .header-nav .menu a:hover {
+    color: rgb(72, 62, 145);
+  }
+  .header-nav .menu .subscribe {
+    transition: 0.3s;
+  }
+  .header-nav .menu .subscribe:hover {
+    background-color: rgb(92, 83, 160);
+    color: white;
   }
   .header-nav .header-info h1 {
     font-size: 9rem;
@@ -203,8 +372,16 @@ html {
   .exhibition .wrap .card-exhi .image .info p {
     font-size: 1.7rem;
   }
+  .subscribe .wrap button {
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .subscribe .wrap button:hover {
+    background-color: #f7bedf;
+    border: none;
+  }
 }
-@media (min-width: 1024px) and (min-width: 1280px) {
+@media (min-width: 1280px) {
   .header-nav .menu a {
     font-size: 3rem;
   }
@@ -218,7 +395,7 @@ html {
     margin-top: 20px;
   }
   .exhibition .wrap h1 {
-    font-size: 2.5rem;
+    font-size: 4rem;
   }
   .exhibition .wrap .card-exhi {
     width: 33.33%;
@@ -230,8 +407,36 @@ html {
   .exhibition .wrap .card-exhi .info p {
     font-size: 1.7rem;
   }
+  .about .wrap .about h1 {
+    font-size: 4rem;
+  }
+  .about .wrap .about .line {
+    width: 20%;
+    margin-bottom: 50px;
+  }
+  .about .wrap .about p {
+    padding: 0 50px;
+    font-size: 2.5rem;
+  }
+  .subscribe {
+    margin-top: 30px;
+  }
+  .subscribe .wrap h1 {
+    font-size: 4rem;
+  }
+  .subscribe .wrap p {
+    font-size: 2.5rem;
+  }
+  .subscribe .wrap input {
+    padding: 10px 20px;
+  }
+  .subscribe .wrap button {
+    margin-top: 40px;
+    padding: 10px 90px;
+    font-size: 2.5rem;
+  }
 }
-@media (min-width: 1024px) and (min-width: 1600px) {
+@media (min-width: 1600px) {
   .header-nav .menu a {
     font-size: 3.5rem;
   }

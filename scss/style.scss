@@ -13,6 +13,7 @@
 html {
 	font-family: "Montserrat", sans-serif;
 	font-size: 10px;
+	scroll-behavior: smooth;
 }
 
 .header-nav {
@@ -87,20 +88,27 @@ html {
 	margin-top: 20px;
 
 	.wrap {
-		margin: 0 auto;
+		display: block;
 		// padding: 10px 20px;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
 		h1 {
 			text-transform: uppercase;
 			text-align: center;
+			margin: 0 auto;
 			padding: 10px 20px;
 			font-size: 1.8rem;
 			color: rgb(92, 83, 160);
 		}
 		.card-exhi {
+			margin-left: auto;
+			margin-right: auto;
 			box-shadow: 0 0 3px black;
 			// border: 1px solid black;
 			margin-bottom: 20px;
 			height: 400px;
+			max-height: 500px;
 			max-width: 300px;
 			.image {
 				height: 50%;
@@ -122,7 +130,93 @@ html {
 					margin-right: auto;
 					margin-bottom: 20px;
 				}
+				p {
+					font-size: 1.5rem;
+				}
 			}
+		}
+	}
+}
+
+.about {
+	margin-left: auto;
+	margin-right: 0;
+	margin-top: 50px;
+	.wrap {
+		padding: 20px;
+		margin-left: 10px;
+		margin-right: 10px;
+		.photo {
+			img {
+				width: 100%;
+			}
+		}
+
+		.about {
+			h1 {
+				text-align: center;
+				text-transform: uppercase;
+				margin-bottom: 10px;
+				font-size: 1.8rem;
+				color: rgb(92, 83, 160);
+			}
+			.line {
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: 20px;
+				width: 20%;
+				border: 2px solid rgb(92, 83, 160);
+			}
+			p {
+				padding: 0 10px 20px 10px;
+				text-align: center;
+				font-size: 1.5rem;
+			}
+		}
+	}
+}
+
+.subscribe {
+	background-color: rgb(174, 166, 231);
+	.wrap {
+		margin: 0 auto;
+		padding: 50px;
+		text-align: center;
+		color: white;
+		h1,
+		p {
+			text-transform: uppercase;
+		}
+		h1 {
+			padding: 20px;
+		}
+		p {
+			margin-bottom: 20px;
+		}
+		input {
+			width: 100%;
+		}
+		button {
+			text-transform: uppercase;
+			margin-top: 10px;
+			padding: 5px 20px;
+			background: none;
+			border: 1px solid rgb(72, 62, 145);
+			color: white;
+		}
+	}
+}
+
+.footer {
+	background-color: #f7bedf;
+	div {
+		margin: 0 auto;
+		max-width: 1280px;
+		p {
+			padding: 20px;
+			text-align: center;
+			color: white;
+			font-size: 1.6rem;
 		}
 	}
 }
@@ -135,19 +229,17 @@ html {
 			max-width: 1600px;
 			margin: 0 auto;
 			text-align: center;
-
 			.card-exhi {
 				display: inline-block;
-				// float: left;
-				// margin: 0;
-				// width: 20%;
-				// .image {
-				// 	height: 60%;
-				// 	img {
-				// 		width: 100%;
-				// 		height: 100%;
-				// 	}
-				// }
+			}
+		}
+	}
+
+	.subscribe {
+		.wrap {
+			input {
+				padding: 10px 20px;
+				width: 90%;
 			}
 		}
 	}
@@ -177,12 +269,14 @@ html {
 			.about,
 			.articles,
 			.subscribe {
+				background: none;
 				padding: 10px 30px;
 			}
 			.articles {
 				margin-right: 20px;
 			}
 			.subscribe {
+				margin-left: 50px;
 				border: 1px solid rgb(92, 83, 160);
 			}
 		}
@@ -202,15 +296,93 @@ html {
 		}
 	}
 
-	.wrap {
-		margin: 0 auto;
-		text-align: center;
-		.card-exhi {
-			display: inline-block;
-			width: 25%;
-			margin: 20px;
-			.image {
-				height: 60%;
+	.exhibition {
+		.wrap {
+			h1 {
+				margin-bottom: 20px;
+				font-size: 3rem;
+			}
+			.card-exhi {
+				display: inline-block;
+				width: 33.3%;
+				margin-left: 10px;
+				margin-right: 10px;
+				.image {
+					height: 60%;
+				}
+			}
+
+			.info {
+				padding: 10px 10px 10px 20px;
+				text-align: center;
+				.line {
+					border: 1px solid black;
+					width: 10%;
+					margin-left: auto;
+					margin-right: auto;
+					margin-bottom: 20px;
+				}
+				p {
+					font-size: 2rem;
+				}
+			}
+		}
+	}
+
+	.about {
+		.wrap {
+			max-width: 1600px;
+			padding: 0;
+			margin-left: auto;
+			margin-right: auto;
+			height: 40vh;
+			.photo,
+			.about {
+				width: 50%;
+				float: left;
+			}
+			.photo {
+				img {
+					width: 100%;
+					max-height: 800px;
+				}
+			}
+
+			.about {
+				h1 {
+					font-size: 3rem;
+				}
+				.line {
+					width: 20%;
+					margin-bottom: 50px;
+				}
+				p {
+					padding: 0 50px;
+
+					font-size: 1.6rem;
+				}
+			}
+		}
+	}
+
+	.subscribe {
+		margin-top: 30px;
+		.wrap {
+			max-width: 1280px;
+			h1 {
+				font-size: 3rem;
+			}
+			p {
+				font-size: 1.6rem;
+			}
+			input {
+				padding: 10px 20px;
+				width: 100%;
+			}
+			button {
+				margin-top: 20px;
+				padding: 10px 50px;
+				font-size: 1.7rem;
 			}
 		}
 	}
@@ -221,6 +393,19 @@ html {
 		.menu {
 			a {
 				font-size: 2.5rem;
+				transition: 0.3s;
+			}
+
+			a:hover {
+				color: rgb(72, 62, 145);
+			}
+			.subscribe {
+				transition: 0.3s;
+			}
+
+			.subscribe:hover {
+				background-color: rgb(92, 83, 160);
+				color: white;
 			}
 		}
 
@@ -253,95 +438,146 @@ html {
 			}
 		}
 	}
-	@media (min-width: 1280px) {
-		.header-nav {
-			.menu {
-				a {
-					font-size: 3rem;
-				}
+	.subscribe {
+		.wrap {
+			button {
+				cursor: pointer;
+				transition: 0.3s;
 			}
-
-			.header-info {
-				h1 {
-					font-size: 11rem;
-				}
-
-				p {
-					font-size: 5rem;
-				}
+			button:hover {
+				background-color: #f7bedf;
+				border: none;
+			}
+		}
+	}
+}
+@media (min-width: 1280px) {
+	.header-nav {
+		.menu {
+			a {
+				font-size: 3rem;
 			}
 		}
 
-		.exhibition {
-			margin-top: 20px;
+		.header-info {
+			h1 {
+				font-size: 11rem;
+			}
 
-			.wrap {
-				h1 {
-					font-size: 2.5rem;
+			p {
+				font-size: 5rem;
+			}
+		}
+	}
+
+	.exhibition {
+		margin-top: 20px;
+
+		.wrap {
+			h1 {
+				font-size: 4rem;
+			}
+			.card-exhi {
+				width: 33.33%;
+				height: 500px;
+				.image {
+					height: 60%;
 				}
-				.card-exhi {
-					width: 33.33%;
-					height: 500px;
-					.image {
-						height: 60%;
-					}
 
-					.info {
-						p {
-							font-size: 1.7rem;
-						}
+				.info {
+					p {
+						font-size: 1.7rem;
 					}
 				}
 			}
 		}
 	}
 
-	@media (min-width: 1600px) {
-		.header-nav {
-			.menu {
-				a {
-					font-size: 3.5rem;
-				}
-			}
-
-			.header-info {
+	.about {
+		.wrap {
+			.about {
 				h1 {
-					font-size: 14rem;
+					font-size: 4rem;
 				}
-
+				.line {
+					width: 20%;
+					margin-bottom: 50px;
+				}
 				p {
-					font-size: 6rem;
+					padding: 0 50px;
+
+					font-size: 2.5rem;
 				}
 			}
 		}
+	}
 
-		.exhibition {
-			margin-top: 20px;
+	.subscribe {
+		margin-top: 30px;
+		.wrap {
+			h1 {
+				font-size: 4rem;
+			}
+			p {
+				font-size: 2.5rem;
+			}
+			input {
+				padding: 10px 20px;
+			}
+			button {
+				margin-top: 40px;
+				padding: 10px 90px;
+				font-size: 2.5rem;
+			}
+		}
+	}
+}
 
-			.wrap {
-				margin: 0 auto;
-				// padding: 10px 20px;
-				h1 {
-					font-size: 3rem;
-				}
-				.card-exhi {
-					height: 600px;
-					width: 33.33%;
-					max-width: 400px;
-					.image {
-						height: 60%;
-						img {
-							width: 100%;
-							height: 100%;
-							max-width: 400px;
-						}
-						// margin-bottom: 50px;
+@media (min-width: 1600px) {
+	.header-nav {
+		.menu {
+			a {
+				font-size: 3.5rem;
+			}
+		}
+
+		.header-info {
+			h1 {
+				font-size: 14rem;
+			}
+
+			p {
+				font-size: 6rem;
+			}
+		}
+	}
+
+	.exhibition {
+		margin-top: 20px;
+
+		.wrap {
+			margin: 0 auto;
+			// padding: 10px 20px;
+			h1 {
+				font-size: 3rem;
+			}
+			.card-exhi {
+				height: 600px;
+				width: 33.33%;
+				max-width: 400px;
+				.image {
+					height: 60%;
+					img {
+						width: 100%;
+						height: 100%;
+						max-width: 400px;
 					}
+					// margin-bottom: 50px;
+				}
 
-					.info {
-						p {
-							font-size: 2rem;
-						}
+				.info {
+					p {
+						font-size: 2rem;
 					}
 				}
 			}
