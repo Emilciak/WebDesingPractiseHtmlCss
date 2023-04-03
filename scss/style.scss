@@ -3,3 +3,177 @@
 	margin: 0;
 	box-sizing: border-box;
 }
+
+html {
+	font-family: "Montserrat", sans-serif;
+	font-size: 10px;
+}
+
+.header-nav {
+	max-width: 1600px;
+	height: 100vh;
+	text-transform: uppercase;
+	background-image: url("../img/header-small.png");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 30px 30px;
+    margin: 0 auto;
+	.menu {
+		display: none;
+	}
+
+	.burger-btn {
+		position: relative;
+		a {
+			position: absolute;
+			left: 0;
+			top: 0;
+			text-decoration: none;
+			font-size: 2rem;
+			font-weight: bold;
+			color: rgb(92, 83, 160);
+		}
+
+		.burger {
+			position: absolute;
+			top: 0;
+			right: 0;
+			div {
+				width: 30px;
+				border: 1px solid black;
+				margin-bottom: 8px;
+			}
+		}
+	}
+
+	.header-info {
+		position: absolute;
+		top: 40%;
+		left: 20%;
+		right: 20%;
+		text-align: center;
+		margin: 0 auto;
+		h1 {
+			font-size: 3rem;
+			margin-bottom: 10px;
+			letter-spacing: 3px;
+
+			span {
+				color: rgb(92, 83, 160);
+			}
+		}
+
+		p {
+			font-size: 1.3rem;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.header-nav {
+		.menu {
+			position: relative;
+			display: block;
+			font-weight: bold;
+			color: rgb(92, 83, 160);
+			a {
+				text-decoration: none;
+				font-size: 2rem;
+			}
+			.as {
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			.menu-links {
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+			.about,
+			.articles,
+			.subscribe {
+				padding: 10px 30px;
+			}
+			.articles {
+				margin-right: 20px;
+			}
+			.subscribe {
+				border: 1px solid rgb(92, 83, 160);
+			}
+		}
+
+		.burger-btn {
+			display: none;
+		}
+
+		.header-info {
+			h1 {
+				font-size: 6rem;
+			}
+
+			p {
+				font-size: 3rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	.header-nav {
+		.menu {
+			a {
+				font-size: 3rem;
+			}
+		}
+
+		.header-info {
+			h1 {
+				font-size: 9rem;
+			}
+
+			p {
+				font-size: 4rem;
+			}
+		}
+	}
+}
+@media (min-width: 1280px) {
+	.header-nav {
+		.menu {
+			a {
+				font-size: 3.6rem;
+			}
+		}
+
+		.header-info {
+			h1 {
+				font-size: 11rem;
+			}
+
+			p {
+				font-size: 5rem;
+			}
+		}
+	}
+}
+@media (min-width: 1600px) {
+	.header-nav {
+		.menu {
+			a {
+				font-size: 4.6rem;
+			}
+		}
+
+		.header-info {
+			h1 {
+				font-size: 14rem;
+			}
+
+			p {
+				font-size: 6rem;
+			}
+		}
+	}
+}
