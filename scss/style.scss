@@ -88,22 +88,26 @@ html {
 
 	.wrap {
 		margin: 0 auto;
-		padding: 10px 20px;
+		// padding: 10px 20px;
 		h1 {
 			text-transform: uppercase;
 			text-align: center;
 			padding: 10px 20px;
 			font-size: 1.8rem;
+			color: rgb(92, 83, 160);
 		}
 		.card-exhi {
-			box-shadow: 0 0 5px black;
+			box-shadow: 0 0 3px black;
+			// border: 1px solid black;
 			margin-bottom: 20px;
 			height: 400px;
+			max-width: 300px;
 			.image {
 				height: 50%;
 				img {
 					width: 100%;
 					height: 100%;
+					max-width: 300px;
 				}
 				// margin-bottom: 50px;
 			}
@@ -130,29 +134,20 @@ html {
 		.wrap {
 			max-width: 1600px;
 			margin: 0 auto;
-			font-size: 0;
-			.card-exhi {
-				margin: 20px 50px;
-				float: left;
-				width: 25%;
-				.image {
-					height: 60%;
-					img {
-						width: 100%;
-						height: 100%;
-					}
-				}
+			text-align: center;
 
-				.info {
-					padding: 30px 50px;
-					text-align: center;
-					.line {
-						margin-bottom: 20px;
-					}
-					p {
-						font-size: 1.5rem;
-					}
-				}
+			.card-exhi {
+				display: inline-block;
+				// float: left;
+				// margin: 0;
+				// width: 20%;
+				// .image {
+				// 	height: 60%;
+				// 	img {
+				// 		width: 100%;
+				// 		height: 100%;
+				// 	}
+				// }
 			}
 		}
 	}
@@ -206,6 +201,19 @@ html {
 			}
 		}
 	}
+
+	.wrap {
+		margin: 0 auto;
+		text-align: center;
+		.card-exhi {
+			display: inline-block;
+			width: 25%;
+			margin: 20px;
+			.image {
+				height: 60%;
+			}
+		}
+	}
 }
 
 @media (min-width: 1024px) {
@@ -226,41 +234,116 @@ html {
 			}
 		}
 	}
-}
-@media (min-width: 1280px) {
-	.header-nav {
-		.menu {
-			a {
+
+	.exhibition {
+		.wrap {
+			h1 {
 				font-size: 3rem;
 			}
-		}
+			.card-exhi {
+				.image {
+					height: 60%;
 
-		.header-info {
-			h1 {
-				font-size: 11rem;
-			}
-
-			p {
-				font-size: 5rem;
+					.info {
+						p {
+							font-size: 1.7rem;
+						}
+					}
+				}
 			}
 		}
 	}
-}
-@media (min-width: 1600px) {
-	.header-nav {
-		.menu {
-			a {
-				font-size: 3.5rem;
+	@media (min-width: 1280px) {
+		.header-nav {
+			.menu {
+				a {
+					font-size: 3rem;
+				}
+			}
+
+			.header-info {
+				h1 {
+					font-size: 11rem;
+				}
+
+				p {
+					font-size: 5rem;
+				}
 			}
 		}
 
-		.header-info {
-			h1 {
-				font-size: 14rem;
+		.exhibition {
+			margin-top: 20px;
+
+			.wrap {
+				h1 {
+					font-size: 2.5rem;
+				}
+				.card-exhi {
+					width: 33.33%;
+					height: 500px;
+					.image {
+						height: 60%;
+					}
+
+					.info {
+						p {
+							font-size: 1.7rem;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media (min-width: 1600px) {
+		.header-nav {
+			.menu {
+				a {
+					font-size: 3.5rem;
+				}
 			}
 
-			p {
-				font-size: 6rem;
+			.header-info {
+				h1 {
+					font-size: 14rem;
+				}
+
+				p {
+					font-size: 6rem;
+				}
+			}
+		}
+
+		.exhibition {
+			margin-top: 20px;
+
+			.wrap {
+				margin: 0 auto;
+				// padding: 10px 20px;
+				h1 {
+					font-size: 3rem;
+				}
+				.card-exhi {
+					height: 600px;
+					width: 33.33%;
+					max-width: 400px;
+					.image {
+						height: 60%;
+						img {
+							width: 100%;
+							height: 100%;
+							max-width: 400px;
+						}
+						// margin-bottom: 50px;
+					}
+
+					.info {
+						p {
+							font-size: 2rem;
+						}
+					}
+				}
 			}
 		}
 	}
