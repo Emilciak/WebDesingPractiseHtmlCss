@@ -231,6 +231,7 @@ html {
     color: rgb(92, 83, 160);
   }
   .header-nav .menu a {
+    	color: rgb(92, 83, 160);
     text-decoration: none;
     font-size: 2rem;
   }
